@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "jsx": "react",
     "allowJs": true,
@@ -13,10 +14,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "paths": {
-      "*": ["node_modules/*"],
       "@assets/*": ["./assets/*"],
       "@src/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*", "tools/**/*"]
+  "include": ["src/**/*"]
 }
