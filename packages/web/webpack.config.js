@@ -24,6 +24,18 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.scss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|gif|jpg|svg)$/,
+        use: "url-loader?name=assets/images/[name]-[hash].[ext]&limit=8192",
+      },
+      {
+        test: /\.(woff2?|otf|ttf|eot)$/,
+        use: "file-loader?name=assets/fonts/[name]-[hash].[ext]",
+      },
     ],
   },
   resolve: {
