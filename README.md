@@ -1,5 +1,10 @@
 # monorepo
 
+### Boilerplates:
+
+Electron React Webpack Typescript - Boilerplate 2021 (ERWT)
+https://github.com/codesbiome/electron-react-webpack-typescript-2021
+
 ### References:
 
 https://github.com/NiGhTTraX/ts-monorepo
