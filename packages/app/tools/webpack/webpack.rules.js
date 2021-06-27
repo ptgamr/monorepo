@@ -1,4 +1,4 @@
-const { inDev } = require('./webpack.helpers');
+const {inDev} = require('./webpack.helpers')
 
 module.exports = [
   {
@@ -9,7 +9,7 @@ module.exports = [
   {
     // Webpack asset relocator loader
     test: /\.(m?js|node)$/,
-    parser: { amd: false },
+    parser: {amd: false},
     use: {
       loader: '@marshallofsound/webpack-asset-relocator-loader',
       options: {
@@ -31,15 +31,20 @@ module.exports = [
   {
     // CSS Loader
     test: /\.css$/,
-    use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+    use: [{loader: 'style-loader'}, {loader: 'css-loader'}],
   },
   {
-    // Less loader
-    test: /\.less$/,
+    test: /\.scss$/i,
     use: [
-      { loader: 'style-loader' },
-      { loader: 'css-loader' },
-      { loader: 'less-loader' },
+      {loader: 'style-loader'},
+      {loader: 'css-loader'},
+      {
+        loader: 'sass-loader',
+        options: {
+          // Prefer `dart-sass`
+          implementation: require('sass'),
+        },
+      },
     ],
   },
   {
@@ -68,4 +73,4 @@ module.exports = [
       },
     ],
   },
-];
+]

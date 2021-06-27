@@ -1,16 +1,20 @@
-import React, { useState } from "react";
-import { hot } from "react-hot-loader";
-import logo from "@assets/images/logo.png";
-import { WebButton } from "@monorepo/web/src/WebButton";
-import "./Application.less";
+import React, {useState} from 'react'
+import {hot} from 'react-hot-loader'
+import logo from '@assets/images/logo.png'
+import {WebButton} from '@monorepo/web/src/WebButton'
+import './Application.scss'
 
 type Props = {
-  title: string;
-  version: string;
-};
+  title: string
+  version: string
+}
 
-const Application: React.FC<Props> = (props) => {
-  const [counter, setCounter] = useState(0);
+const Application = (props: Props) => {
+  return <div>Hello {props.title}</div>
+}
+
+const Application1: React.FC<Props> = (props) => {
+  const [counter, setCounter] = useState(0)
 
   return (
     <React.Fragment>
@@ -22,9 +26,8 @@ const Application: React.FC<Props> = (props) => {
         <p className="main-teaser">
           Custom boilerplate for rapid development of Desktop Applications.
           <br />
-          This project makes use of Electron, React, Typescript, Webpack to
-          serve the best environment for development with hot-reloading of
-          modules.
+          This project makes use of Electron, React, Typescript, Webpack to serve the best
+          environment for development with hot-reloading of modules.
         </p>
         <div className="versions">
           <span>
@@ -41,10 +44,9 @@ const Application: React.FC<Props> = (props) => {
           </span>
         </div>
         <p className="main-teaser small">
-          Click below button to update the application &quot;counter&quot;
-          state. Components will update their states using
-          Hot-Module-Replacement technique, without needing to refresh/reload
-          whole application.
+          Click below button to update the application &quot;counter&quot; state. Components will
+          update their states using Hot-Module-Replacement technique, without needing to
+          refresh/reload whole application.
         </p>
         <button onClick={() => setCounter(counter + 1)}>
           Counter <span>{counter}</span>
@@ -52,7 +54,7 @@ const Application: React.FC<Props> = (props) => {
         <WebButton />
       </main>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default hot(module)(Application);
+export default hot(module)(Application)
