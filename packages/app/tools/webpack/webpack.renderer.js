@@ -1,5 +1,5 @@
-const rules = require('./webpack.rules');
-const plugins = require('./webpack.plugins');
+const rules = require('./webpack.rules')
+const plugins = require('./webpack.plugins')
 
 module.exports = {
   module: {
@@ -7,7 +7,7 @@ module.exports = {
   },
   plugins: plugins,
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
+    extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.scss'],
     alias: {
       // React Hot Loader Patch
       'react-dom': '@hot-loader/react-dom',
@@ -15,4 +15,4 @@ module.exports = {
       ...require('./webpack.aliases'),
     },
   },
-};
+}

@@ -3,6 +3,7 @@ import {hot} from 'react-hot-loader'
 import logo from '@assets/images/logo.png'
 import {WebButton} from '@monorepo/web/src/WebButton'
 import './Application.scss'
+// import './Application.less'
 
 type Props = {
   title: string
@@ -10,7 +11,11 @@ type Props = {
 }
 
 const Application = (props: Props) => {
-  return <div>Hello {props.title}</div>
+  return (
+    <React.Fragment>
+      <main>Hello {props.title}</main>
+    </React.Fragment>
+  )
 }
 
 const Application1: React.FC<Props> = (props) => {

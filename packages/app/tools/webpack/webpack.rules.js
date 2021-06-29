@@ -34,18 +34,13 @@ module.exports = [
     use: [{loader: 'style-loader'}, {loader: 'css-loader'}],
   },
   {
-    test: /\.scss$/i,
-    use: [
-      {loader: 'style-loader'},
-      {loader: 'css-loader'},
-      {
-        loader: 'sass-loader',
-        options: {
-          // Prefer `dart-sass`
-          implementation: require('sass'),
-        },
-      },
-    ],
+    test: /\.scss$/,
+    use: [{loader: 'style-loader'}, {loader: 'css-loader'}, {loader: 'sass-loader'}],
+  },
+  {
+    // Less loader
+    test: /\.less$/,
+    use: [{loader: 'style-loader'}, {loader: 'css-loader'}, {loader: 'less-loader'}],
   },
   {
     // Images Loader
